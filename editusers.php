@@ -1,5 +1,7 @@
 <?php
+session_start();
 include 'db_connect.php';
+include 'header.php';
 
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     header("Location: listusers.php?error=invalid_id");
@@ -40,51 +42,53 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <div class="container">
-    <a href="index.php" class="btn btn-home">Home</a>
-    
-    <h1>Edit User</h1>
-    
-    <?php if (isset($error)): ?>
-        <div class="error"><?= htmlspecialchars($error) ?></div>
-    <?php endif; ?>
+    <div class="form-container">
+        <a href="index.php" class="btn btn-home">Home</a>
+        
+        <h1>Edit User</h1>
+        
+        <?php if (isset($error)): ?>
+            <div class="error"><?= htmlspecialchars($error) ?></div>
+        <?php endif; ?>
 
-    <form method="POST">
-        <div class="form-group">
-            <label>Full Name:</label>
-            <input type="text" name="full_name" 
-                   value="<?= htmlspecialchars($user['full_name']) ?>" required>
-        </div>
+        <form method="POST">
+            <div class="form-group">
+                <label>Full Name:</label>
+                <input type="text" name="full_name" 
+                       value="<?= htmlspecialchars($user['full_name']) ?>" required>
+            </div>
 
-        <div class="form-group">
-            <label>Email:</label>
-            <input type="email" name="email" 
-                   value="<?= htmlspecialchars($user['email']) ?>" required>
-        </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" name="email" 
+                       value="<?= htmlspecialchars($user['email']) ?>" required>
+            </div>
 
-        <div class="form-group">
-            <label>Phone:</label>
-            <input type="tel" name="phone" 
-                   value="<?= htmlspecialchars($user['phone_number']) ?>">
-        </div>
+            <div class="form-group">
+                <label>Phone:</label>
+                <input type="tel" name="phone" 
+                       value="<?= htmlspecialchars($user['phone_number']) ?>">
+            </div>
 
-        <div class="form-group">
-            <label>Role:</label>
-            <select name="role" required>
-                <option value="customer" <?= $user['role'] === 'customer' ? 'selected' : '' ?>>
-                    Customer
-                </option>
-                <option value="therapist" <?= $user['role'] === 'therapist' ? 'selected' : '' ?>>
-                    Therapist
-                </option>
-                <option value="admin" <?= $user['role'] === 'admin' ? 'selected' : '' ?>>
-                    Admin
-                </option>
-            </select>
-        </div>
+            <div class="form-group">
+                <label>Role:</label>
+                <select name="role" required>
+                    <option value="customer" <?= $user['role'] === 'customer' ? 'selected' : '' ?>>
+                        Customer
+                    </option>
+                    <option value="therapist" <?= $user['role'] === 'therapist' ? 'selected' : '' ?>>
+                        Therapist
+                    </option>
+                    <option value="admin" <?= $user['role'] === 'admin' ? 'selected' : '' ?>>
+                        Admin
+                    </option>
+                </select>
+            </div>
 
-        <div class="form-group">
-            <button type="submit" class="btn">Update User</button>
-            <a href="listusers.php" class="btn-secondary">Cancel</a>
-        </div>
-    </form>
+            <div class="form-group">
+                <button type="submit" class="btn">Update User</button>
+                <a href="listusers.php" class="btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
 </div>

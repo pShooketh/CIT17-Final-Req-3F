@@ -1,6 +1,7 @@
 CSS Styles
 body {
     font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
 }
 
 .container {
@@ -92,4 +93,630 @@ th {
     content: "";
     display: table;
     clear: both;
+}
+
+.dashboard-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.menu-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.menu-card h3 {
+    margin: 0 0 10px 0;
+    color: #2196F3;
+}
+
+.menu-card p {
+    margin: 0;
+    color: #666;
+}
+
+.login-section {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.btn-logout {
+    background-color: #f44336;
+    margin-top: 20px;
+}
+
+.btn-logout:hover {
+    background-color: #d32f2f;
+}
+
+.container h1 {
+    text-align: center;
+    color: #1a237e;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: #1a237e;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-brand {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    float: right;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Form Styles Enhancement */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group input,
+.form-group select {
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #1a237e;
+    outline: none;
+}
+
+/* Button Styles Enhancement */
+.btn {
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: #757575;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #616161;
+}
+
+/* Table Enhancement */
+table {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #1a237e;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Success Message */
+.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #1a237e, #0d47a1);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero-text {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Enhanced Menu Cards */
+.card-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.menu-card {
+    text-align: center;
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Quick Actions Section */
+.quick-actions {
+    margin-top: 40px;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.quick-actions h2 {
+    color: #1a237e;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Login Prompt */
+.login-prompt {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 40px;
+}
+
+.login-prompt h2 {
+    color: #1a237e;
+    margin-bottom: 15px;
+}
+
+.login-prompt p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-large {
+    padding: 12px 24px;
+    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .dashboard-menu {
+        grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn-large {
+        width: 100%;
+    }
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.status-pending {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.status-confirmed {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.status-completed {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-canceled {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+/* Filter Section */
+.filter-section {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.filter-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 200px;
+}
+
+/* Reports Grid */
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.report-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.report-card h2 {
+    color: #1a237e;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Stats Container */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.stat-label {
+    display: block;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #1a237e;
+}
+
+/* Report Tables */
+.report-table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.report-table th {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Export Section */
+.export-section {
+    margin-top: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.export-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .reports-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .export-buttons {
+        flex-direction: column;
+    }
+    
+    .filter-section {
+        flex-direction: column;
+    }
+}
+
+/* Availability Calendar Styles */
+.therapist-selector {
+    margin: 20px 0;
+}
+
+.availability-calendar {
+    margin-top: 20px;
+}
+
+.date-group {
+    margin-bottom: 20px;
+}
+
+.date-group h3 {
+    color: #1a237e;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.time-slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f5f5f5;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.time {
+    font-weight: 500;
+}
+
+.slot-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Promotions Grid Styles */
+.promotions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.promo-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.promo-card.expired {
+    opacity: 0.7;
+}
+
+.promo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.discount-badge {
+    background: #e3f2fd;
+    color: #1565c0;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.promo-description {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.promo-dates {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.promo-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Payment Status Styles */
+.status-paid {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-unpaid {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.status-refunded {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+/* No Data Message */
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .promotions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .time-slot {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+/* Add these payment-specific styles to your existing styles.css */
+
+.payment-info {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.payment-info p {
+    margin: 5px 0;
+}
+
+.payment-info strong {
+    color: #1a237e;
+}
+
+/* Payment Status Colors */
+.status-badge.status-paid {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-badge.status-unpaid {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.status-badge.status-refunded {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+/* Add these service-specific styles to your existing styles.css */
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+}
+
+textarea:focus {
+    border-color: #1a237e;
+    outline: none;
+}
+
+.service-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.service-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #1a237e;
+}
+
+.service-duration {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.service-description {
+    color: #666;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+/* Form validation styles */
+input:invalid,
+textarea:invalid {
+    border-color: #f44336;
+}
+
+.validation-message {
+    color: #f44336;
+    font-size: 0.85em;
+    margin-top: 5px;
 }
