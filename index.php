@@ -114,9 +114,28 @@ include 'header.php';
                         foreach ($reviews as $review): ?>
                             <div class="review-card">
                                 <div class="review-rating">
-                                    <?php for ($i = 0; $i < $review['rating']; $i++): ?>
-                                        ⭐
-                                    <?php endfor; ?>
+                                    <?php 
+                                    $rating = $review['rating'];
+                                    $ratingText = '';
+                                    switch($rating) {
+                                        case 1:
+                                            $ratingText = '⭐ Poor';
+                                            break;
+                                        case 2:
+                                            $ratingText = '⭐⭐ Fair';
+                                            break;
+                                        case 3:
+                                            $ratingText = '⭐⭐⭐ Good';
+                                            break;
+                                        case 4:
+                                            $ratingText = '⭐⭐⭐⭐ Very Good';
+                                            break;
+                                        case 5:
+                                            $ratingText = '⭐⭐⭐⭐⭐ Excellent';
+                                            break;
+                                    }
+                                    echo $ratingText;
+                                    ?>
                                 </div>
                                 <div class="review-date">
                                     <?= date('M d, Y', strtotime($review['created_at'])) ?>
